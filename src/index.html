@@ -3,13 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Cabo deals React-Webpack!</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+        <script src="https://js.stripe.com/v3/" async></script>
+        <title>H.E.L.M</title>
     </head>
     <body>
         <div id="root"></div>
-
         <!-- Dependencies -->
         <script src="./node_modules/react/umd/react.development.js"></script>
         <script src="./node_modules/react-dom/umd/react-dom.development.js"></script>
@@ -17,42 +15,10 @@
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
-        <style>
-            .activity-card {
-              position: relative;
-              display: flex;
-            }
-            .activity-card > .title,
-            .activity-card .level {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            }
-            .activity-card > .title {
-              color: #fff;
-              text-align: center;
-              z-index: 1; 
-            }
-            .activity-card .level {
-              color: #000;
-              bottom: 0;
-              height: 20%;
-              background-color: #fff;
-              opacity: .7;
-            }
-            
-            @media screen and (min-width:480px){
-              .activity-Card > .title,
-              .activity-card .level {
-                position: inherit;
-                color: #000;
-              }
-            }
-          </style>
+
+        <!-- Our App Bundle -->
+        <script type="text/javascript" src="/app.bundle.js"></script>
     </body>
 </html>

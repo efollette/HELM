@@ -1,0 +1,47 @@
+.input-alpha {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	color: black;
+}
+.input-alpha label {
+	position: absolute;
+	left: 12px;
+	top: 12px;
+	font-size: 20px;
+	transition: all 0.1s ease-in-out;
+	pointer-events: none;
+	transform-origin: 0% 0%;
+}
+
+input {
+	border: solid 1px #e6e6ea;
+	padding: 10px;
+	border-radius: 2px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	font-size: 14px;
+    transition: all 0.1s ease-in-out;
+    width: 100%;
+}
+
+.input-alpha input:focus {
+	outline: 0;
+	border: 1px solid rgb(240, 176, 0);
+}
+
+.input-alpha input:focus + label {
+	color: rgb(240, 176, 0);
+}
+
+.input-alpha input:valid,
+.input-alpha input:-webkit-autofill {
+	padding: 26px 32px 10px 16px;
+}
+
+.input-alpha input:valid + label,
+.input-alpha input:-webkit-autofill + label {
+	top: 7px;
+	transform: scale(0.8);
+}

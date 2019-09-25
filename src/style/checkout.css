@@ -1,0 +1,99 @@
+.checkoutPage {
+    font-family: 'Aladina', cursive;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background: #ccc;
+}
+
+.checkoutTitle {
+    color: rgb(240, 176, 0);
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 6px;
+    text-shadow: 2px 2px 0px red; 
+}
+
+.checkoutContents {
+    display: block
+}
+
+.orderSummary {
+    position: sticky;
+    height: auto;
+    width: 50%;
+    max-width: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 25px;
+    float: right;
+}
+
+.checkoutForm {
+    width: 50%;
+    padding: 25px;
+}
+
+.totals {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    font-size: 20px;
+}
+
+.moneyz {
+    text-align: right;
+    flex-grow: 1;
+}
+
+.cardCollector {
+    padding: 10px;
+}
+
+legend {
+    color: rgb(240, 176, 0);
+    font-size: 25px;
+    text-shadow: 1px 1.5px 0px red; 
+}
+
+.checkbox {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    width: auto;
+}
+
+.review {
+    display: flex;
+}
+
+.buyMe {
+    width: 100%;
+    max-width: none !important;
+}
+
+.buyMe:hover {
+    color: rgb(240, 176, 0);
+}
+
+@media screen and (max-width: 425px) {
+    .checkoutContents {
+        display: flex;
+        flex-flow: column wrap; 
+    }
+
+    .orderSummary {
+        position: initial;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: none;
+        margin: 0px;
+    }
+
+    .checkoutForm {
+        width: 100%;
+        padding: 0px;
+    }
+}

@@ -1,0 +1,106 @@
+#wrapper {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+    width: 100vw;
+    min-height: 100%;
+    overflow: hidden;
+    border-right: 2px solid #fff;
+}
+
+.layer .content-wrap {
+    position: absolute;
+    width: 100vw;
+    min-height: 100%;
+}
+
+.layer .content-body {
+    width: 25%;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    transform:  translateY(-50%);
+    top: 47%;
+}
+
+.bottom {
+    background:  black;
+    z-index: 1;
+}
+
+.bottom .content-body {
+    right: 10%;
+}
+
+.top {
+    background:  black;
+    z-index: 2;
+    width: 50vw;
+}
+
+.top:hover {
+    background-image: url("/assets/shopHeader.gif");
+}
+
+.top:hover .link {
+    color: black;
+    text-shadow: 2px 2px 2px red;
+}
+
+
+.bottom:hover {
+    background-image: url("/assets/david.gif");
+}
+
+.bottom:hover .link {
+    color: black;
+    text-shadow: 2px 2px 2px magenta;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 4em;
+    font-family: 'Aladina', cursive;
+}
+
+
+@media screen and (max-width: 680px) and (min-width: 630px) {
+    .link {
+        transform: translateX(-10%);
+    }
+}
+
+@media screen and (max-width: 630px) and (min-width: 400px) {
+    .link {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .link {
+        font-size: 1.5em;
+    }
+}
+
+.top .content-body {
+    left: 5%;
+}
+
+.skewed .top {
+    transform:  skew(-10deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+}
+
+.skewed .top .content-wrap {
+    transform:  skew(10deg);
+    margin-left: 1000px;
+}

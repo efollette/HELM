@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Aladina';
+    src: url('/assets/fonts/aladina/Aladina.ttf');
+}
+
+.container{
+    display: flex;
+    min-height: 100%;
+}
+
+.overlay {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1;
+    opacity: 1;
+    background-image: url('/assets/larry.gif');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+.content {
+    position: absolute;
+    margin: 0;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    color: #f1f1f1;
+    width: 5em;
+    border-radius: 55px;
+}
+
+.title {
+    text-align: center;
+    color: rgb(240, 176, 0);
+    font-size: 3.5em;
+    font-family: 'Aladina', cursive;
+    left: 50%;
+    transform: translate(-52%, -0%);
+    position: absolute;
+}
+
+.letters {
+    display: inline;
+    animation: 1s type ease-in forwards;
+    opacity: 0;
+    font-weight: 200;
+    text-shadow: 6.5px 0px 2px rgb(165, 4, 4);
+}
+
+.letters:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.letters:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.letters:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.enter {
+    font-family: 'Aladina', cursive;
+    color: rgb(240, 176, 0);
+    text-decoration: none;
+    font-size: x-large;
+}
+
+.enter:hover {
+    color: red;
+}
+
+@keyframes type {
+    0% { 
+        opacity: 0;  
+    }
+    100% {
+        opacity: 1;
+    }
+}

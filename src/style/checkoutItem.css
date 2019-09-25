@@ -1,0 +1,75 @@
+.chktItm {
+    display: flex;
+    flex-flow: row;
+    padding: 10px;
+}
+
+.chktImgNmSz {
+    display: flex;
+    flex-flow: row;
+    font-size: 25px;
+}
+
+.chktImg {
+    height: 100px;
+    mix-blend-mode: multiply;
+}
+
+.chktNmSz {
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.chktQtyPrice {
+    flex-grow: 1;
+    text-align: right;
+    display: flex;
+    flex-flow: column;
+}
+
+.chktPrice {
+    font-size: 20px;
+    padding-right: 10px; 
+}
+
+.chktItmQty {
+    border: 1px solid grey;
+    border-radius: 15px;
+    width: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: flex-end;
+    font-size: 15px;
+}
+
+.chktItmQty input {
+    height: 10px;
+    border-radius: 15px;
+    border: none;
+    text-align: right;
+    width: 30px;
+    padding: none;
+    background: inherit;
+    color: inherit;
+}
+
+.chktItmQty input:focus {
+    outline: none;
+}
+
+.removeCheckout {
+    color: red;
+    border: none;
+    background: inherit;
+    text-align: right;
+    font-family: 'Aladina', cursive;
+    font-size: 20px;
+}
+
+.removeCheckout:hover {
+    color: rgb(240, 176, 0)
+}
