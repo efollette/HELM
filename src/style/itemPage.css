@@ -1,7 +1,7 @@
 .shopHeader {
     margin: 0 auto;
     height: 70px;
-    background-image: url('/assets/larry.gif');
+    background: #121314;
     text-align: center;
     background-size: cover;
     width: 100%;

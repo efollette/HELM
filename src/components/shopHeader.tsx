@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 import { CartProps } from './main'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons/faShoppingCart'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome/index'
 import '../style/StoreHeader.css'
 
 

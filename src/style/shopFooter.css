@@ -1,8 +1,14 @@
+html, body, .mainDiv {
+    height: 100%;
+    margin: 0;
+    background-color: #e7e7e7;
+}
+
 .footer {
     background: #121314;
     width: 100%;
     text-align: center;
-    flex: none;
+    height: 68px;
 }
 
 .footer ul {

@@ -1,18 +1,18 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const webpack = require('webpack');
+var CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
     entry: {
-       app: "./src/index.tsx",
+        app: "./src/index.tsx",
     },
     output: {
         path: path.resolve('./dist'),
         filename: "[name].bundle.js",
         publicPath: '/'
     },
-
-    // Enable sourcemaps for debugging webpack's output.
-    devtool: "source-map",
 
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
@@ -28,7 +28,18 @@ module.exports = {
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
 
             // All files with a '.css' extension will be handled by 'css-loader'.
-            { test:/\.css$/, use:['style-loader','css-loader'] }
+            { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader'
+                ]
+            },
+            {
+                test: /\.(woff|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+                loader: 'url-loader?limit=100000'
+            },
         ]
     },
     devServer: {
@@ -41,5 +52,16 @@ module.exports = {
             template: './src/index.html',
             filename: 'index.html'
         }),
+        new BundleAnalyzerPlugin(),
+        new webpack.DefinePlugin({ 
+            'process.env': {
+                'NODE_ENV': JSON.stringify('production')
+            }
+        }),
+        new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks 
+        new CompressionPlugin({   
+            filename: "[path].gz[query]",
+            test: /\.js$|\.css$|\.html$/,
+        })
     ]
 };
