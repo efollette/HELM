@@ -86,7 +86,7 @@ class Checkout extends React.Component<CartProps, any> {
                   </fieldset>
                   <fieldset className="review">
                     <legend>Review & Purchase</legend>
-                    <button className="button3 buyMe">Purchase</button>
+                    <button className="button3 buyMe" onClick={this.submit}>Purchase</button>
                   </fieldset>
                 </form>
               </div>

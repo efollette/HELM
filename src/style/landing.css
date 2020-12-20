@@ -46,24 +46,22 @@
 }
 
 .top:hover {
-    background-image: url("/assets/shirts.jpg");
-    background-repeat: repeat;
-    background-size: 420px;
+    background: rgb(31, 31, 31);
 }
 
 .top:hover .link {
-    color: black;
+    color: rgb(240, 176, 0);
     text-shadow: 2px 2px 2px red;
 }
 
 
 .bottom:hover {
-    background-image: url("/assets/david.gif");
+    background: rgb(31, 31, 31);
 }
 
 .bottom:hover .link {
-    color: black;
-    text-shadow: 2px 2px 2px rgb(240, 176, 0);
+    color: rgb(240, 176, 0);
+    text-shadow: 2px 2px 2px red;
 }
 
 .link {

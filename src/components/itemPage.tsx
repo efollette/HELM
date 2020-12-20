@@ -52,8 +52,8 @@ export class ItemPage extends React.Component<Props & Actions, {size: string}> {
                 <section>
                     <div className="itemPage">
                         <div className="images">
-                            <img className="pic itemMain" src={this.props.location.state.mainUrl}></img>
-                            <img className="pic itemSecondary" src={this.props.location.state.altUrl}></img>
+                            <img className="pic itemMain" src={this.props.location.state.mainUrl} alt="Streetware, Clothing, Heart Eyes Lungs Mind, H.E.L.M, D.M.V, Clothes"></img>
+                            <img className="pic itemSecondary" src={this.props.location.state.altUrl} alt="Streetware, Clothing, Heart Eyes Lungs Mind, H.E.L.M, D.M.V, Clothes"></img>
                         </div>
                         <div className="itemInfo">
                             <h1 className="itemName">{this.props.location.state.name}</h1>
@@ -69,7 +69,7 @@ export class ItemPage extends React.Component<Props & Actions, {size: string}> {
                                 </select>
                                 <button className="button2" onClick={() => this.addItem()}>Add to Cart</button>
                             </div>
-                            <p className="description">Vestibulum sollicitudin lobortis neque, ac vestibulum lorem pretium fringilla. Donec lorem nisi, vulputate luctus aliquet et, ornare at dui. Ut tristique malesuada pharetra. Curabitur quis molestie turpis. Aliquam vel odio non enim cursus sodales. Nunc id consequat lacus. Fusce elit augue, ultricies vel pharetra sed, tincidunt sed enim.</p>
+                            <p className="description">{this.props.location.state.description}</p>
                         </div>
                     </div>
                 </section>

@@ -9,6 +9,7 @@ export type ItemProps = {
     price: string,
     size?: string,
     quantity?: string,
+    description?: string,
 }
 
  export const ShopItem = (props:ItemProps) => (
@@ -19,7 +20,8 @@ export type ItemProps = {
                 mainUrl: props.mainUrl,
                 price: props.price,
                 name: props.name,
-                altUrl: props.altUrl
+                altUrl: props.altUrl,
+                description: props.description
             },
         }} >
             <div className="imageContainer">

@@ -23,7 +23,7 @@ export const CartItem = ( props: CartItemProps ) => {
                 <button className="removeBtn" onClick={() => props.remove(props.item)}>X</button>
             </td>
             <td className="imageNameSize">
-                <img className="cartImage" src={props.item.mainUrl}></img>
+                <img className="cartImage" src={props.item.mainUrl} alt="Streetware, Clothing, Heart Eyes Lungs Mind, H.E.L.M, D.M.V, Clothes"></img>
                 <div className="itemNameSize">
                     {props.item.name} <br></br>
                     Size: {props.item.size}

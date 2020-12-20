@@ -17,7 +17,7 @@ export const AddressForm = () => {
                 <label>Address 1</label>
             </div>
             <div className="input-alpha">
-                <input className="addy2" type="text" required={true}/>
+                <input className="addy2" type="text" required={false}/>
                 <label>Address 2</label>
             </div>
             <div className="input-alpha">

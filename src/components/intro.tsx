@@ -19,7 +19,11 @@ const Intro = () => (
                 <Link to="/landing/" className="enter">ENTER</Link>
             </div>
         </div>
-        <div className="overlay"></div>
+        <div className="overlay">
+            <video autoPlay muted loop id="myVideo">
+                <source src="./assets/larry.mp4" type="video/mp4" />
+            </video>
+        </div>
     </div>
 )
 

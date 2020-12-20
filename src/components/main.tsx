@@ -8,6 +8,10 @@ import { Shop } from './shop'
 import { ItemProps } from './shopItem'
 import {ItemPage} from './itemPage'
 import { clothes, art } from '../data'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure()
 
 export type CartProps = {
   items: ItemProps[],
@@ -26,7 +30,7 @@ class Main extends React.Component<{}, CartProps> {
     this.setQuantity = this.setQuantity.bind(this)
     this.state = {
       items: [],
-      total: 0
+      total: 0,
     }
   }
 
@@ -62,6 +66,11 @@ class Main extends React.Component<{}, CartProps> {
       })
     }
     this.calculateTotal()
+    toast("Added to cart successfully", {
+      position: toast.POSITION.BOTTOM_CENTER,
+      autoClose: 2000,
+      type: toast.TYPE.SUCCESS,
+    })
   }
 
   setQuantity( item: ItemProps, qty: number ) {
@@ -84,6 +93,11 @@ class Main extends React.Component<{}, CartProps> {
       items: this.state.items
     })
     this.calculateTotal()
+    toast("Removed item from cart successfully", {
+      position: toast.POSITION.BOTTOM_CENTER,
+      autoClose: 2000,
+      type: toast.TYPE.SUCCESS,
+    })
   }
 
   render() {

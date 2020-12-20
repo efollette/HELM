@@ -1,7 +1,3 @@
-html {
-   background: black;
-}
-
 @font-face {
     font-family: 'Aladina';
     src: url('/assets/fonts/aladina/Aladina.ttf');
@@ -19,10 +15,18 @@ html {
     min-width: 100%; 
     min-height: 100%;
     opacity: 1;
-    background-image: url('/assets/larry.gif');
+    background:  rgb(43, 43, 43);
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center;
+}
+
+.overlay video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .content {
